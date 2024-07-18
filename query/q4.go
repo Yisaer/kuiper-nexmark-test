@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"time"
 
-	"nexmark-go/kuiper"
-	"nexmark-go/nexmark"
+	"github.com/yisaer/kuiper-nexmark-test/kuiper"
+	"github.com/yisaer/kuiper-nexmark-test/nexmark"
 )
 
 type Q4 struct {
@@ -43,10 +43,9 @@ func (q *Q4) SetupQuery() error {
    }
  ],
   "options": {
-        "concurrency": %v,
         "bufferLength":%v
     }
-}`, Concurrency, BufferLength)
+}`, BufferLength)
 	if err := kuiper.DefaultEndpoint.CreateRawRule(q4MemQuery); err != nil {
 		return err
 	}

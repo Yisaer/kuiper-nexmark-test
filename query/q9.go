@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"nexmark-go/kuiper"
-	"nexmark-go/nexmark"
+	"github.com/yisaer/kuiper-nexmark-test/kuiper"
+	"github.com/yisaer/kuiper-nexmark-test/nexmark"
 )
 
 var q9sql = "select bid.auction,bid.bidder,bid.price, bid.datetime, bid.extra, row_number() over (partition by auction.id order by bid.price desc, bid.datetime asc) as rownum from auction inner join bid on auction.id = bid.auction and bid.datetime >= auction.datetime and bid.datetime <= auction.expires group by tumblingWindow(ss,30)"

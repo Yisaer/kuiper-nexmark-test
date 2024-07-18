@@ -21,7 +21,6 @@ var (
 	duration     time.Duration
 	qps          int
 	quries       string
-	concurrency  int
 	bufferLength int
 )
 
@@ -33,7 +32,6 @@ func init() {
 	flag.DurationVar(&duration, "duration", 1*time.Minute, "duration")
 	flag.IntVar(&qps, "qps", 10, "qps")
 	flag.StringVar(&quries, "quries", "q10", "queries")
-	flag.IntVar(&concurrency, "concurrency", 1, "concurrency")
 	flag.IntVar(&bufferLength, "bufferLength", 1024, "concurrency")
 	flag.Parse()
 }
@@ -67,8 +65,6 @@ func benchmark(ctx context.Context) {
 }
 
 func setupParam() {
-	query.Concurrency = concurrency
-	kuiper.Concurrency = concurrency
 	query.BufferLength = bufferLength
 	kuiper.BufferLength = bufferLength
 }

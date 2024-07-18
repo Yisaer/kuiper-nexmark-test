@@ -10,10 +10,9 @@ import (
 	mqtt "github.com/eclipse/paho.mqtt.golang"
 	"golang.org/x/time/rate"
 
-	"nexmark-go/nexmark"
+	"github.com/yisaer/kuiper-nexmark-test/nexmark"
 )
 
-var Concurrency int
 var BufferLength int
 
 var Quries map[string]QueryCase

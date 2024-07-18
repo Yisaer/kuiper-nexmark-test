@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"nexmark-go/kuiper"
-	"nexmark-go/nexmark"
+	"github.com/yisaer/kuiper-nexmark-test/kuiper"
+	"github.com/yisaer/kuiper-nexmark-test/nexmark"
 )
 
 type Q8 struct {

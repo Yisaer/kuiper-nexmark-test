@@ -1,11 +1,14 @@
-module "github.com/yisaer/kuiper-nexmark-test"
+module github.com/yisaer/kuiper-nexmark-test
 
 go 1.20
 
 require (
-	github.com/eclipse/paho.mqtt.golang v1.4.3 // indirect
+	github.com/eclipse/paho.mqtt.golang v1.4.3
+	golang.org/x/time v0.3.0
+)
+
+require (
 	github.com/gorilla/websocket v1.5.0 // indirect
 	golang.org/x/net v0.8.0 // indirect
 	golang.org/x/sync v0.1.0 // indirect
-	golang.org/x/time v0.3.0 // indirect
 )

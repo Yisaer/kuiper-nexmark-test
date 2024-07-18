@@ -10,7 +10,6 @@ import (
 var DefaultEndpoint *EKuiperEndpoint
 var BrokerHost string
 var BrokerPort int
-var Concurrency int
 var BufferLength int
 
 type EKuiperEndpoint struct {
@@ -83,10 +82,9 @@ func (e *EKuiperEndpoint) CreateRule(id, sql string) error {
    }
  ],
  "options": {
-        "concurrency": %v,
         "bufferLength": %v
     }
-}`, id, sql, BrokerHost, BrokerPort, id, Concurrency, BufferLength)
+}`, id, sql, BrokerHost, BrokerPort, id, BufferLength)
 	r, err := http.Post(fmt.Sprintf("http://%s:%d/rules", e.Host, e.Port), "application/json; charset=UTF-8", bytes.NewReader([]byte(data)))
 	if err != nil {
 		return err

@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"nexmark-go/kuiper"
-	"nexmark-go/nexmark"
+	"github.com/yisaer/kuiper-nexmark-test/kuiper"
+	"github.com/yisaer/kuiper-nexmark-test/nexmark"
 )
 
 var q10sql = `SELECT auction, bidder, price, datetime, extra, format_time(datetime, 'yyyy-MM-dd') as f1, format_time(datetime, 'HH:mm') as f2 FROM bid;`
