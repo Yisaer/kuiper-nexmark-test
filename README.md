@@ -12,23 +12,28 @@ kuiper-nexmark-test will create the nexmark rule into eKuiper, then generate and
 6. `qps`, the qps for test tool sending data to the broker, default `10`
 7. `queries`, the supported queries for the nexmark
 
+## Build
+
+```shell
+make build
+```
 
 ## Running Single query for Quick Start
 
 ```shell
-./main --duration 10s --qps 10 --queries "q1"
+./kuiper-nexmark-test --duration 10s --qps 10 --queries "q1"
 ```
 
 ## Running multiple queries
 
 ```shell
-./main --duration 10s --qps 10 --queries "q1,q2"
+./kuiper-nexmark-test  --duration 10s --qps 10 --queries "q1,q2"
 ```
 
 ## Running multiple queries in parallel
 
 ```shell
-./main --duration 10s --qps 1000 --queries "q1,q2" --parallel true
+./kuiper-nexmark-test  --duration 10s --qps 1000 --queries "q1,q2" --parallel true
 ```
 
 ## Supported Query
