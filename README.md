@@ -10,7 +10,7 @@ kuiper-nexmark-test will create the nexmark rule into eKuiper, then generate and
 4. `brokerPort`, the port of the mqtt broker, default `1883`
 5. `duration`, the duration of the testcase running, default `1m`
 6. `qps`, the qps for test tool sending data to the broker, default `10`
-7. `queries`, the supported quries for the nexmark
+7. `queries`, the supported queries for the nexmark
 
 
 ## Running Single test
