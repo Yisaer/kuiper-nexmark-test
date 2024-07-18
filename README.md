@@ -8,18 +8,29 @@ kuiper-nexmark-test will create the nexmark rule into eKuiper, then generate and
 2. `port`, the port of the ekuiper, default `9081`
 3. `broker`, the host of the mqtt broker, default `127.0.0.1`
 4. `brokerPort`, the port of the mqtt broker, default `1883`
-5. `duration`, the duration of the testcase running, default `1m`
+5. `duration`, the duration of the testcase running, default `5s`
 6. `qps`, the qps for test tool sending data to the broker, default `10`
 7. `queries`, the supported queries for the nexmark
 
 
-## Running Single test
+## Running Single query
 
 ```shell
-./main --host <ekuiperHost> --port <ekuiperPort> --broker <brokerHost> --brokerPort <brokerPort> --duration 1m --qps 1000 --quest "q1"
+./main --duration 1m --qps 10 --queries "q1"
 ```
 
-## Running multiple quries
+## Running multiple queries
+
 ```shell
-./main --host <ekuiperHost> --port <ekuiperPort> --broker <brokerHost> --brokerPort <brokerPort> --duration 1m --qps 1000 --quest "q1,q2"
+./main --duration 1m --qps 10 --queries "q1,q2"
 ```
+
+## Running multiple queries in parallel
+
+```shell
+./main --duration 1m --qps 1000 --queries "q1,q2" --parallel true
+```
+
+## Supported Query
+
+q1,q2,q3,q4,q6,q7,q8,q9,q10
