@@ -22,3 +22,5 @@ go.work
 
 # jetbrans workspace
 .idea
+
+kuiper-nexmark-test
