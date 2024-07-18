@@ -13,22 +13,22 @@ kuiper-nexmark-test will create the nexmark rule into eKuiper, then generate and
 7. `queries`, the supported queries for the nexmark
 
 
-## Running Single query
+## Running Single query for Quick Start
 
 ```shell
-./main --duration 1m --qps 10 --queries "q1"
+./main --duration 10s --qps 10 --queries "q1"
 ```
 
 ## Running multiple queries
 
 ```shell
-./main --duration 1m --qps 10 --queries "q1,q2"
+./main --duration 10s --qps 10 --queries "q1,q2"
 ```
 
 ## Running multiple queries in parallel
 
 ```shell
-./main --duration 1m --qps 1000 --queries "q1,q2" --parallel true
+./main --duration 10s --qps 1000 --queries "q1,q2" --parallel true
 ```
 
 ## Supported Query
